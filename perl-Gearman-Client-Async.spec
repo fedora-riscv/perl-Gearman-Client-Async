@@ -1,8 +1,8 @@
 Name:           perl-Gearman-Client-Async
 Version:        0.94
-Release:        3%{?dist}
+Release:        4%{?dist}
 Summary:        Asynchronous Client for the Gearman distributed job system
-License:        GPL or Artistic
+License:        GPL+ or Artistic
 Group:          Development/Libraries
 URL:            http://search.cpan.org/dist/Gearman-Client-Async/
 Source0:        http://www.cpan.org/authors/id/B/BR/BRADFITZ/Gearman-Client-Async-%{version}.tar.gz
@@ -62,6 +62,9 @@ rm -rf %{buildroot}
 %{_mandir}/man3/*
 
 %changelog
+* Thu Feb 07 2008 Tom "spot" Callaway <tcallawa@redhat.com> 0.94-4
+- rebuild for new perl
+
 * Mon Jun 09 2007 Ruben Kerkhof <ruben@rubenkerkhof.com> 0.94-3
 - Disable test which fails on x86_64 (#246356)
 * Mon Jun 02 2007 Ruben Kerkhof <ruben@rubenkerkhof.com> 0.94-2

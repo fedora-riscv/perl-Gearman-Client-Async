@@ -1,6 +1,6 @@
 Name:           perl-Gearman-Client-Async
 Version:        0.94
-Release:        8%{?dist}
+Release:        9%{?dist}
 Summary:        Asynchronous Client for the Gearman distributed job system
 License:        GPL+ or Artistic
 Group:          Development/Libraries
@@ -62,6 +62,9 @@ rm -rf %{buildroot}
 %{_mandir}/man3/*
 
 %changelog
+* Thu Dec 16 2010 Marcela Maslanova <mmaslano@redhat.com> - 0.94-9
+- 661697 rebuild for fixing problems with vendorach/lib
+
 * Sun May 02 2010 Marcela Maslanova <mmaslano@redhat.com> - 0.94-8
 - Mass rebuild with perl-5.12.0
 

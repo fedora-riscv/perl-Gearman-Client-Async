@@ -1,6 +1,6 @@
 Name:           perl-Gearman-Client-Async
 Version:        0.94
-Release:        17%{?dist}
+Release:        18%{?dist}
 Summary:        Asynchronous Client for the Gearman distributed job system
 License:        GPL+ or Artistic
 Group:          Development/Libraries
@@ -84,6 +84,9 @@ rm -rf %{buildroot}
 %{_mandir}/man3/*
 
 %changelog
+* Sat Jun 07 2014 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 0.94-18
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_21_Mass_Rebuild
+
 * Sat Aug 03 2013 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 0.94-17
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_20_Mass_Rebuild
 

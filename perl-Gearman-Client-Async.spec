@@ -1,6 +1,6 @@
 Name:           perl-Gearman-Client-Async
 Version:        0.94
-Release:        19%{?dist}
+Release:        20%{?dist}
 Summary:        Asynchronous Client for the Gearman distributed job system
 License:        GPL+ or Artistic
 Group:          Development/Libraries
@@ -84,6 +84,9 @@ rm -rf %{buildroot}
 %{_mandir}/man3/*
 
 %changelog
+* Fri Jun 05 2015 Jitka Plesnikova <jplesnik@redhat.com> - 0.94-20
+- Perl 5.22 rebuild
+
 * Wed Aug 27 2014 Jitka Plesnikova <jplesnik@redhat.com> - 0.94-19
 - Perl 5.20 rebuild
 

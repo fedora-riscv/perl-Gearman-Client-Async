@@ -13,6 +13,7 @@ BuildRequires:  coreutils
 BuildRequires:  findutils
 BuildRequires:  make
 BuildRequires:  perl
+BuildRequires:  perl-generators
 BuildRequires:  perl(ExtUtils::MakeMaker)
 # Run-time:
 BuildRequires:  perl(base)
@@ -68,7 +69,7 @@ make test
 
 %install
 make pure_install DESTDIR=%{buildroot}
-find %{buildroot} -type f -name .packlist -exec rm -f {} \;
+find %{buildroot} -type f -name .packlist -delete
 %{_fixperms} %{buildroot}/*
 
 %files
@@ -79,6 +80,7 @@ find %{buildroot} -type f -name .packlist -exec rm -f {} \;
 %changelog
 * Fri Jun 03 2016 Petr Pisar <ppisar@redhat.com> - 0.94-25
 - Adapt to Gearman-1.12.007 (CPAN RT#115026)
+- Modernize spec file
 
 * Tue May 17 2016 Jitka Plesnikova <jplesnik@redhat.com> - 0.94-24
 - Perl 5.24 rebuild

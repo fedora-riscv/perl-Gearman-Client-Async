@@ -1,11 +1,13 @@
 Name:           perl-Gearman-Client-Async
 Version:        0.94
-Release:        24%{?dist}
+Release:        25%{?dist}
 Summary:        Asynchronous Client for the Gearman distributed job system
 License:        GPL+ or Artistic
 Group:          Development/Libraries
 URL:            http://search.cpan.org/dist/Gearman-Client-Async/
 Source0:        http://www.cpan.org/authors/id/B/BR/BRADFITZ/Gearman-Client-Async-%{version}.tar.gz
+# Adapt to Gearman-1.12.007, CPAN RT#115026
+Patch0:         Gearman-Client-Async-0.94-Do-not-use-removed-Gearman-Objects.patch
 BuildArch:      noarch
 BuildRequires:  coreutils
 BuildRequires:  findutils
@@ -19,7 +21,6 @@ BuildRequires:  perl(constant)
 BuildRequires:  perl(Danga::Socket) >= 1.52
 BuildRequires:  perl(fields)
 BuildRequires:  perl(Gearman::JobStatus)
-BuildRequires:  perl(Gearman::Objects)
 BuildRequires:  perl(Gearman::ResponseParser)
 BuildRequires:  perl(Gearman::Task)
 BuildRequires:  perl(Gearman::Util)
@@ -49,6 +50,7 @@ Asynchronous Client for the Gearman distributed job system
 
 %prep
 %setup -q -n Gearman-Client-Async-%{version}
+%patch0 -p1
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -75,6 +77,9 @@ find %{buildroot} -type f -name .packlist -exec rm -f {} \;
 %{_mandir}/man3/*
 
 %changelog
+* Fri Jun 03 2016 Petr Pisar <ppisar@redhat.com> - 0.94-25
+- Adapt to Gearman-1.12.007 (CPAN RT#115026)
+
 * Tue May 17 2016 Jitka Plesnikova <jplesnik@redhat.com> - 0.94-24
 - Perl 5.24 rebuild
 

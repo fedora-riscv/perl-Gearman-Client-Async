@@ -3,7 +3,6 @@ Version:        0.94
 Release:        31%{?dist}
 Summary:        Asynchronous Client for the Gearman distributed job system
 License:        GPL+ or Artistic
-Group:          Development/Libraries
 URL:            https://metacpan.org/release/Gearman-Client-Async
 Source0:        https://cpan.metacpan.org/authors/id/B/BR/BRADFITZ/Gearman-Client-Async-%{version}.tar.gz
 # Adapt to Gearman-1.12.007, CPAN RT#115026
